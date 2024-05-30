@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide-Up Text Reveal on Scroll</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .text-section {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+            margin: 50px 0;
+        }
+
+        .text-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .spacer {
+            height: 100vh; /* Just to create some space for scrolling */
+        }
+    </style>
+</head>
+<body>
+
+<div class="spacer"></div>
+
+<div class="container">
+    <div class="text-section">This is some text that will slide up into view when you scroll down.</div>
+    <div class="text-section">Here is another text section that will also slide up into view.</div>
+    <div class="text-section">Keep scrolling to see more text sections slide up into view.</div>
+</div>
+
+<div class="spacer"></div>
+
+<script>
+    const textSections = document.querySelectorAll('.text-section');
+
+    const revealOnScroll = () => {
+        const triggerBottom = window.innerHeight / 5 * 4;
+
+        textSections.forEach(section => {
+            const sectionTop = section.getBoundingClientRect().top;
+
+            if(sectionTop < triggerBottom) {
+                section.classList.add('visible');
+            } else {
+                section.classList.remove('visible');
+            }
+        });
+    };
+
+    window.addEventListener('scroll', revealOnScroll);
+
+    // Initial call to reveal elements that are already in view on page load
+    revealOnScroll();
+</script>
+
+</body>
+</html>
