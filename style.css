@@ -51,18 +51,6 @@ html {
     background: #ac6c0c;  
   }
 
-  #preloader{
-    top: 0;
-    position: fixed;
-    z-index: 10000;
-    height: 100vh;
-    width: 100%;
-    background-image: url(images/Preloader.gif);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
 nav{
     top: 0;
     display: flex;
