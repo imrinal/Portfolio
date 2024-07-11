@@ -9,6 +9,8 @@
     <script src="script.js"></script>
 </head>
 <body>
+    <div id="preloader">Hi</div>
+
     <header class="header">
        <nav>
         <div class="head-txt">
@@ -270,28 +272,25 @@
     <section id="contact">
         <div class="contact">
             <div class="contact-hd">
-                <h1>Lets Get In  <span style="color: #FDAE35;">Touch!</span></h1>
+                <h1>Lets Get In <span style="color: #FDAE35;">Touch!</span></h1>
             </div>
             <div class="contact-body">
                 <div class="contact-form">
                     <form action="https://api.web3forms.com/submit" method="POST">
-                      <input type="hidden" name="redirect" value="ThankYou.html">
-                      <input type="hidden" name="access_key" value="846ef7d0-e838-45af-91e2-ce6bf2660fa2">
-                      <label for="name">Name</label>
-                      <input type="text" id="name" name="name" required>
-                
-                      <label for="email">Email</label>
-                      <input type="email" id="email" name="email" required>
-                
-                      <label for="message">Message</label>
-                      <textarea id="message" name="message" rows="5" required></textarea>
-                
-                      <button type="submit">Send Message</button>
+                        <input type="hidden" name="access_key" value="846ef7d0-e838-45af-91e2-ce6bf2660fa2">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <button type="submit">Send Message</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
+    
     
     <footer>
     </footer>
