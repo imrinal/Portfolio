@@ -555,6 +555,14 @@ th{
     border: 1.5px solid black;
 }
 
+.project-button{
+    gap: 15px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: center;
+}
+
 .contact{
     display: flex;
     flex-direction: column;
